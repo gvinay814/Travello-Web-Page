@@ -1,0 +1,464 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+
+    <title>css web page with styles</title>
+    <style type="text/css">
+        #topbar{
+            background-color:none;
+            width:1000px;
+            margin:0 auto;
+            height:40px
+
+        }
+        body{
+            margin:0;
+            padding:0
+        }
+        #logo{
+            width:100px;
+            margin-top:5px;
+            margin-right:8px;
+            float:left
+
+
+        }
+        .topbar-section{
+            float:left;
+            border-left:1.5px grey solid;
+
+            height:100%
+        }
+        #signin_logo {
+            width:30px;
+            margin-left:8px;
+            margin-top:6px;
+            float:left;
+        }
+        #signin-text{
+            font-weight:bold;
+            font-size:90%;
+            position:relative;
+            top:8px;
+            left:11px;
+            float:left;
+            padding-right:20px
+
+
+
+
+
+        }
+        .topbar-menu {
+            font-weight: bold;
+            padding-left: 10px;
+            padding-top: 8px;
+            padding-right: 10px;
+            height: 29px
+        }
+
+        #search-box{
+            background-color:gray;
+            border:none;
+            font-weight:bold;
+            position:relative;
+            top:-5px
+        }
+        #search_logo{
+            position:relative;
+            right:5px;
+            top:3px
+        }
+        .clear{
+            clear:both;
+        }
+        #menubar-container{
+            background-color:red;
+            height:70px;
+        }
+        #menubar{
+            width:1000px;
+            margin:0 auto;
+
+
+
+        }
+        h1{
+            padding-top:12px;
+            font-size:40px;
+            color:white;
+
+        }
+        #menubar-2-container {
+            background-color:red;
+            width:100%
+
+
+        }
+        .menubar-2 {
+            width: 1000px;
+            margin:0 auto;
+            height:30px;
+        }
+        .menubar-2 a{
+            color:white;
+            text-decoration:none;
+            margin-top:5px;
+            padding:0 10px;
+            border-right:1px gray solid;
+            position:relative;
+            top:5px
+
+        }
+        .menubar-2 a:hover{
+            text-decoration:underline
+        }
+        #page-container{
+            background-color:;
+            width:1300px;
+            margin:0 auto;
+            position:relative;
+            bottom:18px
+
+
+        }
+        h2{
+            font-weight:normal;
+            border-bottom:2px red solid;
+            width:115px
+
+
+        }
+        #main-article-container{
+            background-color:none;
+            width:500px;
+            float:left;
+
+        }
+        #elon-text {
+            font-size: 220%;
+            font-family:freesans;
+        }
+        #elon-jpg{
+            width:500px;
+        }
+        #elon-text a {
+            text-decoration:none;
+            color: #7d7167
+        }
+        #elon-text a:hover{
+
+            text-decoration:underline;
+            color:orangered;
+        }
+        #tech-text {
+            position: relative;
+            bottom: 20px;
+            color:#7d7167;
+            text-decoration:none;
+        }
+        #tech-text a:hover{
+          color:red;
+          text-decoration:underline;
+        }
+        #direct-text a {
+            color:#7d7167;
+
+            text-decoration: none;
+        }
+        #direct-text a:hover{
+            color:red;
+            text-decoration:underline
+        }
+        #main-article{
+            float:left
+        }
+        #main-article2-container {
+            float:left;
+            width:800px;
+            height:none;
+            background-color:none;
+            margin-top:70px;
+
+
+        }
+        #article-verse{
+            float:left
+        }
+        #article-verse-container{
+            background-color:none;
+            float:left;
+            width:240px;
+            margin-left:15px;
+            margin-bottom:15px
+
+
+        }
+        #main-article2-container a {
+            text-decoration: none;
+            color:#7d7167;
+        }
+        #main-article2-container a:hover{
+            color:red;
+            text-decoration:underline
+        }
+        #clock-a2{
+            position:relative;
+            top:5px
+        }
+        #tiktok-img{
+            width:240px
+        }
+        #apple-img {
+            width: 200px
+        }
+        #tender-img{
+            width:238px
+        }
+        #swedish-img{
+            width:238px
+        }
+        #manchester-img{
+            width:240px;
+        }
+        #main-article-3{
+            background-color:aquamarine;
+            margin-top:125px
+
+
+        }
+        #articl:3-containers{
+            background-color:green;
+
+        }
+        #main-article-3 a {
+            text-decoration: none;
+            color:#7d7167;
+
+        }
+        #main-article-3 a:hover{
+            color:red;
+            text-decoration:under
+        }
+        #main-article-3 img{
+            width:200px
+        }
+        .clock-2{
+            width:2px;
+
+        }
+        #topbar a{
+            text-decoration: none;
+            color:#7d7167;
+        }
+        #topbar a:hover{
+            color:red;
+            text-decoration:underline
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div id="topbar">
+        <img id="logo" src="{%static 'images/bbc logo.png' %}"></img>
+        <div id="signin-div" class="topbar-section">
+            <img id="signin_logo" src="{% static 'images/signin-logo.png' %}"></img>
+            <span id="signin-text"><a href="login">Sign in</a></span>
+
+        </div>
+        <div class="topbar-section topbar-menu">
+            <a href="register">Register</a>
+        </div>
+        <div class="topbar-section topbar-menu">
+            News
+        </div>
+        <div class="topbar-section topbar-menu">
+            Sport
+        </div>
+        <div class="topbar-section topbar-menu">
+            Reel
+        </div>
+        <div class="topbar-section topbar-menu">
+            work life
+        </div>
+        <div class="topbar-section topbar-menu">
+            Travel
+        </div>
+        <div class="topbar-section topbar-menu">
+            Future
+        </div>
+        <div class="topbar-section topbar-menu">
+            <img src="{% static 'images/more-logo.png' %}"></img>
+
+        </div>
+        <div class="topbar-section topbar-menu">
+            <input id="search-box" typeof="text" placeholder="search"></input>
+            <img id="search_logo" src="{% static 'images/search-logo.png' %}"></img>
+
+        </div>
+
+
+
+    </div>
+    <div class="clear"></div>
+    <div id="menubar-container">
+        <div id="menubar">
+            <h1>NEWS</h1>
+        </div>
+    </div>
+    <div id="menubar-2-container">
+        <div class="menubar-2">
+            <a href="">Home</a>
+            <a href="">war in ukraine</a>
+            <a href="">corona virus</a>
+            <a href="">climate</a>
+            <a href="">asia</a>
+            <a href="">Uk</a>
+            <a href="">Tech</a>
+            <a href="">Science</a>
+            <a href="">Stories</a>
+            <a href="">Entertainments & arts</a>
+            <a href="">health</a>
+            <a href="">world news Tv</a>
+
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="page-container">
+        <div id="main-article-container">
+            <div id="main-article">
+                <h2>Technology</h2>
+                <div>
+                    <img id="elon-jpg" src="{% static 'images/elon.jpg' %}"></img><br></br>
+                </div>
+                <div id="elon-text">
+                    <a href=""> Twitter staff say Musk era sackings have started</a>
+                </div>
+                <div>
+                    <p> Employess are saying on social media they have lost their jobs ahead of an announcment by the company</p>
+                </div>
+                <div id="tech-text">
+                    <img src="{% static 'images/clock.png' %}">2h | <a href="">Technology</a></img>
+                </div>
+                <div id="direct-text">
+                    <a href=""><h4>Elon Musk Says 8$ Monthly fee for twitter blue tick</h4></a>
+                    <a href=""><h4>Musk Dissolve twitter's board odf director's</h4></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="main-article2-container">
+            <div id="article-verse-container">
+                <img src="{% static 'images/metaverse.jpg' %}"></img>
+                <a href=""><h3>Billions being spent in metaverse land grab</h3></a>
+                <p>corparations,Speculators and individuals</p>
+                <img id="clock-a2" src="{% static 'images/clock.png' %}"></img> 2h | <a href="">Technology</a></img>
+
+            </div>
+            <div id="article-verse-container">
+                <img id="tiktok-img" src="{% static 'images/tiktok.jpg' %}"></img>
+                <a href=""><h3>Tik tok says staff in china can access UK and EU data </h3></a>
+                <p>corparations,Speculators and individuals</p>
+                <img id="clock-a2" src="{% static 'images/clock.png' %}"></img> 2h | <a href="">Technology</a></img>
+
+            </div>
+            <div id="article-verse-container">
+                <img src="{% static 'images/metaverse.jpg' %}"></img>
+                <a href=""><h3>Billions being spent in metaverse land grab</h3></a>
+                <p>corparations,Speculators and individuals</p>
+                <img id="clock-a2" src="{% static 'images/clock.png' %}"></img> 2h | <a href="">Technology</a></img>
+
+            </div>
+            <div id="article-verse-container">
+                <img id="tender-img" src="{% static 'images/tinder.jpg' %}"></img>
+                <a href=""><h3>Billions being spent in metaverse land grab</h3></a>
+                <p>corparations,Speculators and individuals</p>
+                <img id="clock-a2" src="{% static 'images/clock.png' %}"></img> 2h | <a href="">Technology</a></img>
+
+            </div>
+            <div id="article-verse-container">
+                <img id="swedish-img" src="{% static 'images/swedish.jpg' %}"></img>
+                <a href=""><h3>Billions being spent in metaverse land grab</h3></a>
+                <p>corparations,Speculators and individuals</p>
+                <img id="clock-a2" src="{% static 'images/clock.png' %}"></img> 2h | <a href="">Technology</a></img>
+
+            </div>
+            <div id="article-verse-container">
+                <img id="manchester-img" src="{% static 'images/manchester.jpg' %}"></img>
+                <a href=""><h3>Billions being spent in metaverse land grab</h3></a>
+                <p>corparations,Speculators and individuals</p>
+                <img id="clock-a2" src="{% static 'images/clock.png' %}"></img> 2h | <a href="">Technology</a></img>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="clear"></div>
+        <div id="main-article-3">
+            <div id="articl:3-containers">
+                {% for news in news %}
+                    <div id="article-verse-container">
+                        <img src="{{news.img.url}}"></img>
+                        <a href=""><h3>{{news.title}}</h3></a>
+                        <p>{{news.desc}}</p>
+                        <img class="clock-2" src="images/clockng' %}"></img> 2h | <a href="">Technology</a></img>
+
+
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
